@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OMCC: Option maximization across scales</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">OMCC: Option maximization across scales</h1>
+</header>
+<h1
+id="option-maximization-across-scales-evolvability-the-arrow-of-time-and-a-refuted-solenoid-prediction-for-quantum-gravity-dimensional-reduction">Option
+maximization across scales: evolvability, the arrow of time, and a
+refuted solenoid prediction for quantum-gravity dimensional
+reduction</h1>
+<p><strong>Author</strong>: Akito Shiraishi <strong>Draft</strong>:
+arXiv physics version, EN v0.1 (2026-06-03). Target: gr-qc /
+physics.gen-ph (perspective). Companion philosophy version on
+PhilArchive. <strong>Stance</strong>: A unifying perspective with a
+deliberately three-layer honesty structure: established results, an
+observationally decidable point, and an openly metaphysical organizing
+idea. Predictions are stated with their refutations included.</p>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>We present a unifying perspective in which a single control
+quantity—the number of future reachable states, or “option quantity”
+<span class="math inline">\(\Omega\)</span>—organizes several
+established results across scales. (i) <strong>Established</strong>: in
+fluctuating environments the optimal evolvability rises with
+environmental volatility (Ishii et al. 1989), and a population’s
+relative entropy to its stationary distribution contracts monotonically
+(a numerically verified arrow of time, max per-step increase <span
+class="math inline">\(\sim10^{-16}\)</span>); a diffusion H-theorem
+yields an exact law for complexity-growth rate <span
+class="math inline">\(\propto e^{-2H_{\rm init}}\)</span> (numerically,
+slope <span class="math inline">\(-1.978\)</span> vs predicted <span
+class="math inline">\(-2\)</span>). (ii) <strong>Geometric</strong>:
+across scales, integrable dynamics live on invariant tori (KAM; electron
+and planetary orbits), and an infinite nesting of tori is a
+Smale–Williams solenoid with Čech invariant <span
+class="math inline">\(\check H^1=\mathbb Z[1/k]\)</span>. (iii)
+<strong>Observable</strong>: the cosmological reach is confined to the
+empirically decidable question of cosmic topology (is the spatial
+topology a 3-torus?). We then state, test, and <strong>refute</strong> a
+sharp prediction—that a solenoid’s spectral dimension runs to 2 at small
+scales, matching quantum-gravity dimensional reduction—reporting the
+negative numerical result honestly so that specialists can carry out the
+rigorous calculation. The contribution is not a new quantitative law
+(the central monotonicity is due to Ishii 1989) but an integrative frame
+with an explicit observational hook and a fully disclosed failed
+prediction.</p>
+<hr />
+<h2 id="introduction">1. Introduction</h2>
+<p>The second law predicts decay of order, yet complexity grows (life,
+cognition). Several principles each capture a fragment—maximum entropy
+production (Dewar 2003), dissipative adaptation (England 2013; bound
+refuted by Kolchinsky 2024), causal entropic forces (Wissner-Gross &amp;
+Freer 2013), Wagner’s evolvability (2008). We organize them by
+<strong>option maximization</strong>: selection toward maximizing future
+reachable states <span class="math inline">\(\Omega\)</span>, controlled
+by environmental volatility <span class="math inline">\(\nu\)</span> via
+a time horizon <span class="math inline">\(\tau\)</span>. We are
+explicit about what is established, what is observationally decidable,
+and what is metaphysical—and we include a refuted prediction rather than
+hiding it.</p>
+<h2 id="established-layer">2. Established layer</h2>
+<p><strong>2.1 Evolvability vs volatility.</strong> Let the long-term
+growth rate (geometric-mean log-fitness / dominant Lyapunov exponent) be
+<span
+class="math display">\[\Lambda(\mu,\nu)=\lim_{T\to\infty}\tfrac1T\sum_{t=1}^T\log\Big[\sum_x
+f(x,e_t)p_t(x)\Big],\]</span> maximized over evolvability <span
+class="math inline">\(\mu\)</span>. Ishii–Matsuda–Iwasa–Sasaki (1989)
+solved <span class="math inline">\(\mu^*\approx\nu\)</span> in the
+strong-selection limit. A toy model (<span
+class="math inline">\(K=11\)</span> phenotypes, Gaussian fitness, jump
+environment) reproduces monotone <span
+class="math inline">\(\mu^*(\nu)\)</span> with scaling exponent <span
+class="math inline">\(\beta=1\)</span> (prefactor model-dependent).
+<em>We note honestly that a “three-phase law” we initially conjectured
+(efficiency/option/saturation phases) was found to be a grid/threshold
+artifact under refinement and is withdrawn.</em></p>
+<p><strong>2.2 Arrow of time (numerically verified).</strong> Under a
+fixed environment, the selection–mutation operator has a unique
+stationary <span class="math inline">\(p^*\)</span> (Perron–Frobenius);
+the relative entropy <span class="math inline">\(D(p_t\|p^*)\)</span>
+decreases monotonically to zero for all tested <span
+class="math inline">\((\mu,\sigma)\)</span>, maximum per-step
+<em>increase</em> <span class="math inline">\(\sim10^{-16}\)</span>
+(numerical noise). The selection-inclusive nonlinear dynamics preserves
+the contraction. <em>We retract an earlier claim that a
+fluctuation-theorem symmetry unifies growth rate and arrow: replicator
+dynamics is time-irreversible, so the Crooks-type symmetry is not
+expected; the arrow rests on relative-entropy contraction, the
+large-deviation principle (numerically convex SCGF) on growth-rate
+fluctuations—two distinct statements.</em></p>
+<p><strong>2.3 Past Hypothesis, conditional law.</strong> For pure
+diffusion <span class="math inline">\(\partial_t p=D\partial_x^2
+p\)</span>, <span class="math inline">\(dH/dt=D\,I_{\rm
+Fisher}[p]\ge0\)</span> (de Bruijn). The Gaussian solution gives <span
+class="math inline">\(dH/dt|_0=D/\sigma_0^2\propto e^{-2H_{\rm
+init}}\)</span>. Numerically the slope of <span
+class="math inline">\(\log(dH/dt|_0)\)</span> vs <span
+class="math inline">\(H_{\rm init}\)</span> is <span
+class="math inline">\(-1.978\)</span> (predicted <span
+class="math inline">\(-2\)</span>). This is a conditional statement
+(given a low-entropy initial state); it does <strong>not</strong>
+explain why that state obtained (initial-condition problem). Penrose’s
+conformal cyclic cosmology offers a cyclic closure (aeons supply the
+next low-entropy state), but CCC is itself contested.</p>
+<h2 id="geometric-layer-tori-across-scales">3. Geometric layer: tori
+across scales</h2>
+<p>Integrable Hamiltonian systems live on invariant tori
+(Liouville–Arnold; KAM under perturbation). Hydrogen (Kepler) and
+planets alike: <strong>micro and macro share the same invariant-torus
+structure</strong>. Bohr–Sommerfeld quantization <span
+class="math inline">\(\oint_{\gamma_i}p\,dq=n_ih\)</span> is action
+quantization on torus cycles. The “stage-4” experience of pervasive
+access corresponds to irrational-winding dense orbits (Weyl
+equidistribution). An infinite nesting “torus within torus” is precisely
+the <strong>Smale–Williams solenoid</strong> <span
+class="math inline">\(\Sigma_k=\varprojlim(T^n\xleftarrow{\times
+k}T^n)\)</span>, locally Cantor<span
+class="math inline">\(\times\)</span>interval, with <span
+class="math inline">\(\check H^1(\Sigma_k)=\mathbb Z[1/k]\)</span>
+distinguishing it from a manifold torus.</p>
+<h2 id="observable-layer-cosmic-topology">4. Observable layer: cosmic
+topology</h2>
+<p>The only empirically decidable cosmological claim is whether the
+spatial topology is non-trivial (e.g. 3-torus): a multiply connected
+universe imprints “circles in the sky” (matched circle pairs) on the
+CMB. Planck shows no clear pairs (shortest loop <span
+class="math inline">\(&gt;98.5\%\)</span> of the last-scattering
+diameter), but 2024 analyses (COMPACT collaboration; arXiv:2403.09221)
+report weak hints of non-trivial topology. This is the single point
+where the framework touches falsifiable observation.</p>
+<h2 id="a-sharp-predictionand-its-refutation">5. A sharp prediction—and
+its refutation</h2>
+<p><strong>Prediction (stated, then tested).</strong> Quantum gravity
+(causal sets, CDT, asymptotic safety, Hořava–Lifshitz, spin foams)
+near-universally predicts a running spectral dimension <span
+class="math inline">\(d_s:4\to2\)</span> toward the Planck
+scale—spacetime becomes non-manifold/fractal, so the “smooth-manifold”
+premise that excludes solenoids breaks. We therefore predicted:
+<em>spacetime has solenoidal structure at the Planck scale, with <span
+class="math inline">\(d_s\to2\)</span> at small scales.</em></p>
+<p><strong>Test (numerical).</strong> We computed <span
+class="math inline">\(d_s(t)=-2\,d\log P/d\log t\)</span> from the heat
+trace of a discrete Smale–Williams solenoid (twisted circle bundle,
+graph Laplacian). Result: <span class="math inline">\(d_s\to0\)</span>
+at small scales (k=2: 0.36, k=3: 0.48), <span
+class="math inline">\(d_s\to1\)</span> at large scales (circle
+dominates), with a mid-scale peak (<span
+class="math inline">\(d_s\approx2.05\)</span> at k=3).</p>
+<p><strong>Refutation.</strong> The small-scale behavior (<span
+class="math inline">\(d_s\to0\)</span>) is <strong>opposite</strong> to
+the quantum-gravity prediction (<span
+class="math inline">\(d_s\to2\)</span>). The mid-scale <span
+class="math inline">\(d_s\approx2\)</span> is at the wrong location and
+is not claimed as a match. <strong>The prediction is not supported by
+this calculation.</strong> The discrete model is coarse (last-digit
+diffusion; higher hierarchy only via monodromy), so a rigorous solenoid
+heat-kernel could differ—but the present result is negative. We report
+it in full and invite specialists to perform the rigorous computation.
+<em>(This is the honesty the three-layer structure demands: a stated,
+tested, refuted prediction, disclosed rather than buried.)</em></p>
+<h2 id="discussion-three-layer-honesty">6. Discussion: three-layer
+honesty</h2>
+<ul>
+<li><strong>Established</strong> (§2–3): evolvability, arrow of time,
+Past-Hypothesis conditional law, KAM tori—standard or numerically
+verified.</li>
+<li><strong>Observable</strong> (§4): cosmic topology—decidable by
+future CMB analysis.</li>
+<li><strong>Metaphysical/refuted</strong> (§5 and the companion OMCC
+perspective): the option-maximizing co-constitution organizing idea is
+evaluated by unifying economy, not truth; the solenoid–spacetime
+prediction is refuted as stated.</li>
+</ul>
+<p>The contribution is <strong>integrative</strong>: a single <span
+class="math inline">\(\Omega\)</span>-maximization lens, with <span
+class="math inline">\(\tau\)</span> interpolating dissipation (<span
+class="math inline">\(\tau\to0\)</span>) and option (<span
+class="math inline">\(\tau&gt;0\)</span>) regimes, containing
+MEP/England/Wagner/causal-entropic-force as limits. We claim no new
+quantitative law; the value is the unifying frame plus an explicit
+observational hook (§4) and disclosed failure (§5).</p>
+<h2 id="conclusion">7. Conclusion</h2>
+<p>Option maximization organizes evolvability, the arrow of time, and a
+cross-scale torus geometry into one perspective, touches falsifiable
+observation at cosmic topology, and—tested honestly—does
+<strong>not</strong> support a solenoid model of Planck-scale spacetime.
+We publish the frame, the observational hook, and the refuted prediction
+together, inviting external verification and the rigorous solenoid
+spectral-dimension computation we could not complete.</p>
+<h2 id="references">References</h2>
+<p>Ishii, Matsuda, Iwasa &amp; Sasaki (1989) <em>Genetics</em> 121:163;
+Wagner (2008) <em>Proc. R. Soc. B</em>; Wissner-Gross &amp; Freer (2013)
+<em>PRL</em> 110:168702; Dewar (2003) <em>J. Phys. A</em>; England
+(2013) <em>J. Chem. Phys.</em>; Kolchinsky (2024) arXiv:2404.01130; de
+Bruijn / Carroll–Chen (2004); Penrose (2010) <em>Cycles of Time</em>;
+Arnold, <em>Mathematical Methods of Classical Mechanics</em>; Smale
+(1967) <em>Bull. AMS</em>; Williams (1974); COMPACT collaboration,
+arXiv:2210.11426, 2403.09221; Ambjørn–Jurkiewicz–Loll (CDT); Reuter
+(asymptotic safety); companion: OMCC philosophy version (PhilArchive),
+<code>2026-06-03_白石統合学説v2.0_決定版.md</code>.</p>
+</body>
+</html>

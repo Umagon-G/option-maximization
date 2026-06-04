@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Option-maximizing co-constitution</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Option-maximizing co-constitution</h1>
+</header>
+<h1
+id="option-maximizing-co-constitution-experience-observation-points-and-the-unity-of-observer-and-cosmos">Option-maximizing
+co-constitution: experience, observation points, and the unity of
+observer and cosmos</h1>
+<p><strong>Author</strong>: Akito Shiraishi <strong>Draft</strong>:
+PhilArchive philosophy version, EN v0.1 (2026-06-03). Companion physics
+version on arXiv (gr-qc). <strong>Stance</strong>: A first-person
+experiential account, scaffolded on Tegmark, Wheeler, and Wigner,
+advanced to an explicit metaphysical thesis (OMCC). Evaluated by
+unifying economy (pragmatic structural realism), not by
+truth-correspondence—so the unfalsifiability objection is structurally
+disarmed, while in-frame predictions remain testable.</p>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>Why does the mathematics an observer discovers coincide with the
+mathematics of the cosmos? Wigner called this coincidence inexplicable.
+Tegmark answers that the cosmos <em>is</em> a mathematical structure and
+the observer a self-aware substructure (so coincidence is necessary,
+with the cosmos prior); Wheeler answers that the observer constitutes
+the cosmos (participatory, so coincidence is authored, with the observer
+prior). These conflict. We propose <strong>Option-Maximizing
+Co-constitution (OMCC)</strong>: observer and cosmos are neither prior,
+but <strong>co-constituted within a self-exciting cycle that runs toward
+maximizing the option quantity <span
+class="math inline">\(\Omega\)</span> (future reachable
+states)</strong>; their mathematics coincide because they occupy the
+same phase of one cycle. The infinite regress “why the <span
+class="math inline">\(\Omega\)</span>-direction?” is closed not as a
+linear wall (the Past Hypothesis) but as a <strong>cycle</strong>
+(Penrose’s conformal cyclic cosmology; autopoiesis; Wheeler’s
+self-exciting circuit). The thesis’s distinctive content—beyond the
+three named figures—is the <strong>observation point</strong> (the
+finest observing unit, recurring fractally across micro and macro), the
+<strong><span class="math inline">\(\Omega\)</span>-maximization
+drive</strong>, the <strong>solenoid geometry</strong>, and a
+<strong>first-person experiential datum</strong> (a directly seen nested
+cycle) that plays the philosophical role of adjudicating the
+Tegmark–Wheeler tension.</p>
+<hr />
+<h2 id="the-problem-wigner-and-two-answers-in-tension">1. The problem
+(Wigner) and two answers in tension</h2>
+<p>Wigner (1960): the effectiveness of mathematics in describing nature
+borders on the mysterious, with no rational explanation. Two later
+positions answer, but conflict: - <strong>Tegmark (MUH)</strong>:
+external reality <em>is</em> a mathematical structure; observers are
+self-aware substructures (SAS). Coincidence is necessary—<strong>cosmos
+prior</strong>. - <strong>Wheeler (participatory universe; “It from
+Bit”; self-exciting circuit)</strong>: observer-participancy constitutes
+reality; the universe evolves observers through which it observes itself
+into being. Coincidence is authored—<strong>observer prior</strong>.</p>
+<p>The tension is the chicken-and-egg of priority.</p>
+<h2 id="omcc-the-co-constitution-cycle">2. OMCC: the co-constitution
+cycle</h2>
+<blockquote>
+<p>Observer and cosmos are neither prior. They are
+<strong>co-constituted within a self-exciting cycle running toward <span
+class="math inline">\(\Omega\)</span>-maximization</strong>. The
+observer’s mathematics coincides with the cosmos’s because both are the
+same cycle viewed at the same phase (synchrony). Wigner’s mystery
+dissolves once description (observer-mathematics) and the described
+(cosmos-mathematics) are seen as one cycle’s self-reference.</p>
+</blockquote>
+<p>This sublates Tegmark (realism) and Wheeler (participation) as two
+phases of one cycle—akin to Whitehead’s mutual immanence, but with the
+<strong>drive specified as <span
+class="math inline">\(\Omega\)</span>-maximization</strong> and the
+<strong>geometry specified as a solenoid</strong>, which is the author’s
+own contribution.</p>
+<h2
+id="observation-points-a-contribution-absent-in-the-three-figures">3.
+Observation points (a contribution absent in the three figures)</h2>
+<p>The <strong>observation point</strong> is the finest observing unit
+from a given vantage; an individual is a weighted set of observation
+points with energy allocations; and observation points <strong>recur
+fractally across micro and macro scales</strong>. This refines Tegmark’s
+SAS by giving it (i) a scale-recursive structure and (ii) an internal
+energy/attention allocation. On a torus, an observation point is a point
+whose dense (irrational-winding) trajectory scans the whole—formalizing
+the experiential “stage-4” pervasive access.</p>
+<h2 id="experience-as-primary-datum-the-experiential-method">4.
+Experience as primary datum (the experiential method)</h2>
+<p>In a non-ordinary state the author directly <em>saw</em> a “nested
+cycle”—the image that motivates OMCC. The methodological claim: rather
+than decoration, <strong>this experience does philosophical
+work</strong>—because the cycle was seen, it can serve as the candidate
+structure that resolves the Tegmark–Wheeler tension. The scaffolding
+(Tegmark/Wheeler/Wigner) is used as authority/premise; the experience is
+the first-person datum advanced on top. We separate two senses of
+“fact”: the experience is a <strong>phenomenological fact</strong>
+(certain qua experience); its identity with cosmic structure is a
+<strong>hypothesis</strong> (partly testable via cosmic topology, in the
+companion physics version). The brain-side fact (the neural correlates
+of the experience) and the cosmos-side fact are distinct; OMCC predicts
+their coincidence because the observing brain is co-constituted within
+the cosmic cycle.</p>
+<h2 id="unity-truth-the-thesiss-epistemic-core">5. Unity = truth (the
+thesis’s epistemic core)</h2>
+<blockquote>
+<p>The mathematical structure a self-aware observation point discovers
+coincides with the mathematical structure of the cosmos that contains
+it; <strong>this coincidence is the core of truth.</strong></p>
+</blockquote>
+<p>Tegmark holds coincidence <em>necessary</em>; the author advances one
+step—<strong>coincidence as the definition of truth’s core</strong>.
+This is a stance, not a proof; it answers Wigner by fiat (declaring the
+synchrony point to be where truth lives), which is a philosophical
+choice evaluated by fruitfulness, not correspondence.</p>
+<h2 id="closing-the-regress-as-a-cycle">6. Closing the regress as a
+cycle</h2>
+<p>“Why the <span class="math inline">\(\Omega\)</span>-direction?”
+regresses, in the physics companion, to the Past Hypothesis (a wall).
+Philosophically, OMCC closes it as a <strong>cycle</strong>: Penrose’s
+conformal cyclic cosmology (an aeon’s high-<span
+class="math inline">\(\Omega\)</span> far future conformally supplies
+the next low-entropy beginning), <strong>autopoiesis</strong>
+(self-production’s closed loop), and Wheeler’s <strong>self-exciting
+circuit</strong> all say the regress is not a line ending at a wall but
+a self-supplying loop. The ultimate “why is there a cycle at all?”
+remains (the metaphysical wall is not removed, only relocated), and we
+say so.</p>
+<h2 id="honest-epistemic-status-pragmatic-structural-realism">7. Honest
+epistemic status (pragmatic structural realism)</h2>
+<p>OMCC is <strong>metaphysics evaluated by unifying economy, not
+truth-correspondence</strong>. This disarms the unfalsifiability
+objection at its premise (the objection assumes a theory must correspond
+and be refutable to have value; we evaluate by how economically the
+frame unifies). But we keep a strict duality: the <strong>frame</strong>
+is judged by economy, while <strong>in-frame empirical claims</strong>
+(the companion’s cosmic-topology hook; the <em>refuted</em> solenoid
+spectral-dimension prediction) remain testable and were tested—one was
+refuted and is reported as such. We explicitly refuse to claim universal
+truth (“this is the author’s frame, not a universal doctrine”),
+forestalling the cultic failure mode (no external verifier). The
+named-authority coincidence (independently reaching
+Tegmark/Wheeler/Wigner/Penrose) attests to the quality of the intuition;
+the missing piece was descriptive language, here supplied.</p>
+<h2 id="conclusion">8. Conclusion</h2>
+<p>OMCC offers a single organizing idea—co-constitution of observer and
+cosmos within an <span class="math inline">\(\Omega\)</span>-maximizing
+cycle—that sublates the Tegmark–Wheeler tension, answers Wigner by
+locating truth at the synchrony point, closes the regress as a cycle,
+and contributes the observation point, the <span
+class="math inline">\(\Omega\)</span>-drive, the solenoid geometry, and
+a first-person experiential datum. It is metaphysics, openly: evaluated
+by unifying economy, anchored to one falsifiable observational hook
+(cosmic topology, companion paper) and one honestly refuted prediction.
+We publish it for external verification and extension.</p>
+<h2 id="references">References</h2>
+<p>Wigner (1960) <em>Comm. Pure Appl. Math.</em> 13:1; Tegmark (2008)
+<em>Found. Phys.</em>, (2014) <em>Our Mathematical Universe</em>;
+Wheeler (1990) “Information, Physics, Quantum”; Penrose (2010)
+<em>Cycles of Time</em>; Maturana &amp; Varela (1972) <em>Autopoiesis
+and Cognition</em>; Whitehead, <em>Process and Reality</em>; Husserl
+(co-constitution); Worrall (structural realism); James/Peirce
+(pragmatism); companion physics version (arXiv).</p>
+</body>
+</html>
