@@ -2,6 +2,7 @@
 
 **Author**: Akito Shiraishi ([@Umagon-G](https://github.com/Umagon-G))
 **Status**: Open preprint for external verification and extension. Satoshi-style — publish the best honest version (refutations included) and let collective intelligence deepen it.
+**Published**: Philosophy version on PhilArchive — [philarchive.org/rec/SHIOCE](https://philarchive.org/rec/SHIOCE) ([PDF](https://philarchive.org/archive/SHIOCE))
 
 ## What this is
 
@@ -19,7 +20,7 @@ In a sentence of practice: **option ≻ money ≻ talent ≻ knowledge** — don
 
 ## Files
 - [`paper_physics_arxiv.md`](paper_physics_arxiv.md) — physics version (gr-qc target)
-- [`paper_philosophy_philarchive.md`](paper_philosophy_philarchive.md) — philosophy version (PhilArchive target)
+- [`paper_philosophy_philarchive.md`](paper_philosophy_philarchive.md) — philosophy version (**published**: [PhilArchive rec/SHIOCE](https://philarchive.org/rec/SHIOCE))
 - [`broadcast_ja.md`](broadcast_ja.md) — plain-language introduction (Japanese)
 
 ## How to engage
